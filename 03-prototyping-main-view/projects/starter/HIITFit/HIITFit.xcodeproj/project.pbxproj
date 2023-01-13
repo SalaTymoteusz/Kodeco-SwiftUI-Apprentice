@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89DA55F22971F5D90083878D /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA55F12971F5D90083878D /* RatingView.swift */; };
+		89DA55F429721E220083878D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA55F329721E220083878D /* HeaderView.swift */; };
 		CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C923251474DC0049DB93 /* HIITFitApp.swift */; };
 		CD30C926251474DC0049DB93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C925251474DC0049DB93 /* ContentView.swift */; };
 		CD30C928251474DD0049DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD30C927251474DD0049DB93 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89DA55F12971F5D90083878D /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		89DA55F329721E220083878D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CD30C920251474DC0049DB93 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD30C923251474DC0049DB93 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		CD30C925251474DC0049DB93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				CD30C925251474DC0049DB93 /* ContentView.swift */,
 				CD30C95025147E420049DB93 /* WelcomeView.swift */,
 				CD30C95325147E4B0049DB93 /* ExerciseView.swift */,
+				89DA55F329721E220083878D /* HeaderView.swift */,
+				89DA55F12971F5D90083878D /* RatingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,9 +214,11 @@
 				CD30C95425147E4B0049DB93 /* ExerciseView.swift in Sources */,
 				CD30C95125147E420049DB93 /* WelcomeView.swift in Sources */,
 				CD30C926251474DC0049DB93 /* ContentView.swift in Sources */,
+				89DA55F22971F5D90083878D /* RatingView.swift in Sources */,
 				CD30C93F25147A8C0049DB93 /* DateExtension.swift in Sources */,
 				CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */,
 				CD30C94025147A8C0049DB93 /* ImageExtension.swift in Sources */,
+				89DA55F429721E220083878D /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

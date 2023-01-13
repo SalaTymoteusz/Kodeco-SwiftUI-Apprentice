@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2023 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -32,25 +32,31 @@
 
 import SwiftUI
 
-struct ExerciseView: View {
-  let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
-  let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
-  let index: Int
-
-  var body: some View {
-      VStack {
-          HeaderView(exerciseName: videoNames[index])
-          Text("Video player")
-          Text("Timer")
-          Text("Start/Done button")
-          Text("Rating")
-          Text("History button")
-      }
-  }
+struct HeaderView: View {
+    let exerciseName: String
+    var body: some View {
+        VStack {
+            Text(exerciseName)
+                .font(.largeTitle)
+            HStack {
+                Image(systemName: "1.circle")
+                Image(systemName: "2.circle")
+                Image(systemName: "3.circle")
+                Image(systemName: "4.circle")
+            }
+            .font(.title2)
+        }
+    }
 }
 
-struct ExerciseView_Previews: PreviewProvider {
-  static var previews: some View {
-    ExerciseView(index: 0)
-  }
+struct HeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            HeaderView(exerciseName: "Squat")
+                .previewLayout(.sizeThatFits)
+            HeaderView(exerciseName: "Squat")
+                .environment(\.sizeCategory, .accessibilityLarge)
+                .previewLayout(.sizeThatFits)
+        }
+    }
 }
