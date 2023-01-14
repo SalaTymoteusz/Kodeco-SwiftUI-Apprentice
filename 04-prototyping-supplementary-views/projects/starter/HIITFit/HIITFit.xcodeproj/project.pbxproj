@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		89FFFBB42972B138007571A9 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FFFBB32972B138007571A9 /* HistoryView.swift */; };
+		89FFFBB62972E938007571A9 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FFFBB52972E938007571A9 /* SuccessView.swift */; };
 		CD0BEE1F2525844200937B4F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0BEE1E2525844200937B4F /* RatingView.swift */; };
 		CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C923251474DC0049DB93 /* HIITFitApp.swift */; };
 		CD30C926251474DC0049DB93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C925251474DC0049DB93 /* ContentView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		89FFFBB32972B138007571A9 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		89FFFBB52972E938007571A9 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		CD0BEE1E2525844200937B4F /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		CD30C920251474DC0049DB93 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD30C923251474DC0049DB93 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				CD30C95325147E4B0049DB93 /* ExerciseView.swift */,
 				CD30C958251486730049DB93 /* HeaderView.swift */,
 				CD0BEE1E2525844200937B4F /* RatingView.swift */,
+				89FFFBB52972E938007571A9 /* SuccessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				CD30C95425147E4B0049DB93 /* ExerciseView.swift in Sources */,
 				CD30C95125147E420049DB93 /* WelcomeView.swift in Sources */,
+				89FFFBB62972E938007571A9 /* SuccessView.swift in Sources */,
 				CD30C926251474DC0049DB93 /* ContentView.swift in Sources */,
 				CD0BEE1F2525844200937B4F /* RatingView.swift in Sources */,
 				CD30C93F25147A8C0049DB93 /* DateExtension.swift in Sources */,
