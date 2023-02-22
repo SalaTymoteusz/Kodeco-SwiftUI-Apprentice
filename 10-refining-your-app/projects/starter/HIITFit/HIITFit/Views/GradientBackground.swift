@@ -1,15 +1,15 @@
-/// Copyright (c) 2021 Razeware LLC
-///
+/// Copyright (c) 2023 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-///
+/// 
 /// This project and source code may use libraries or frameworks that are
 /// released under various Open-Source licenses. Use of those libraries and
 /// frameworks are governed by their own individual licenses.
@@ -32,27 +32,35 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @SceneStorage("selectedTab") private var selectedTab = 9
-    
+struct GradientBackground: View {
     var body: some View {
-        ZStack {
-            GradientBackground()
-            TabView(selection: $selectedTab) {
-                WelcomeView(selectedTab: $selectedTab)
-                    .tag(9)
-                ForEach(0 ..< Exercise.exercises.count) { index in
-                    ExerciseView(selectedTab: $selectedTab, index: index)
-                        .tag(index)
-                }
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        }
+        LinearGradient(
+            gradient: gradient,
+            startPoint: .top,
+            endPoint: .bottom)
+        .edgesIgnoringSafeArea(.all)
+    }
+    
+    
+    var gradient: Gradient {
+        let color1 = Color("gradient-top")
+        let color2 = Color("gradient-bottom")
+        let background = Color("background")
+        return Gradient(
+            stops: [
+                Gradient.Stop(color: color1, location: 0),
+                Gradient.Stop(color: color2, location: 0.9),
+                Gradient.Stop(color: background, location: 0.9),
+                Gradient.Stop(color: background, location: 1)
+            ])
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct GradientBackground_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GradientBackground()
+            .frame(width: 300, height: 300)
+            .previewLayout(.sizeThatFits)
     }
 }
+
