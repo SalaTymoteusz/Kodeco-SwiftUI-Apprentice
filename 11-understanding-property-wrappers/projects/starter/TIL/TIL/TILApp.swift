@@ -34,9 +34,11 @@ import SwiftUI
 
 @main
 struct TILApp: App {
-  var body: some Scene {
-    WindowGroup {
-      ContentView()
+    @StateObject var store = ThingStore()
+    var body: some Scene {
+        WindowGroup {
+            ContentView(myThings: store)
+                .environment(\.textCase, .uppercase)
+        }
     }
-  }
 }
