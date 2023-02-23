@@ -37,8 +37,9 @@ struct TILApp: App {
     @StateObject var store = ThingStore()
     var body: some Scene {
         WindowGroup {
-            ContentView(myThings: store)
+            ContentView()
                 .environment(\.textCase, .uppercase)
+                .environmentObject(store)
         }
     }
 }

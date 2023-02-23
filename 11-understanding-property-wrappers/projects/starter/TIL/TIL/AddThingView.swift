@@ -34,7 +34,7 @@ import SwiftUI
 
 struct AddThingView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var someThings: ThingStore
+    @EnvironmentObject var someThings: ThingStore
     @State private var thing = ""
     
     var body: some View {
@@ -57,6 +57,7 @@ struct AddThingView: View {
 
 struct AddThingView_Previews: PreviewProvider {
     static var previews: some View {
-        AddThingView(someThings: ThingStore())
+        AddThingView()
+            .environmentObject(ThingStore())
     }
 }

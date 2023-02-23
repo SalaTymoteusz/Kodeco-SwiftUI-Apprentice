@@ -37,7 +37,8 @@ class ThingStore: ObservableObject {
 }
 
 struct ContentView: View {
-    @ObservedObject var myThings: ThingStore
+//    @ObservedObject var myThings: ThingStore
+    @EnvironmentObject var myThings: ThingStore
     @State private var showAddThing = false
     
     var body: some View {
@@ -53,7 +54,7 @@ struct ContentView: View {
                 Spacer()
             }
             .sheet(isPresented: $showAddThing) {
-                AddThingView(someThings: myThings)
+                AddThingView()
             }
             .navigationTitle("TIL")
             .toolbar {
@@ -71,7 +72,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(myThings: ThingStore())
+        ContentView()
             .environment(\.textCase, .uppercase)
+            .environmentObject(ThingStore())
     }
 }
